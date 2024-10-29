@@ -1,8 +1,8 @@
-function App() {
+function Index() {
   return (
     <>
       <div className="ud-header absolute left-0 top-0 z-40 flex w-full items-center bg-transparent">
-        <div className="container">
+        <div className="container mx-auto">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4">
               <a href="index.html" className="navbar-logo block w-full py-5">
@@ -127,8 +127,8 @@ function App() {
 
       <div
         id="home"
-        className="relative overflow-hidden bg-primary pt-[120px] md:pt-[130px] lg:pt-[160px]">
-        <div className="container">
+        className="relative overflow-hidden  bg-primary pt-[120px] md:pt-[130px] lg:pt-[160px]">
+        <div className="container max-w-screen-md">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4">
               <div
@@ -137,11 +137,7 @@ function App() {
                 <h1 className="mb-6 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]">
                   PENDETEKSI LUBANG JALAN
                 </h1>
-                <p className="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
-                  "Aplikasi cerdas pendeteksi lubang jalan berbasis YOLO yang
-                  mempermudah pemantauan infrastruktur secara akurat dan
-                  real-time."
-                </p>
+                <p className="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]"></p>
                 <ul className="mb-10 flex flex-wrap items-center justify-center gap-5">
                   <li>
                     <a
@@ -1843,11 +1839,7 @@ function App() {
                       Get Started Now
                     </span>
                   </h2>
-                  <p className="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white">
-                    "Coba demo aplikasi Road Guard sekarang dan rasakan
-                    kemudahan mendeteksi lubang jalan secara otomatis dengan
-                    teknologi AI!"
-                  </p>
+                  <p className="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white"></p>
                   <a
                     href="javascript:void(0)"
                     className="inline-block rounded-md border border-transparent bg-gray-1-to-r px-7 py-3 text-base font-medium text-white transition hover:bg-[#0BB489]">
@@ -2718,7 +2710,7 @@ function App() {
       <footer
         className="wow fadeInUp relative z-10 bg-[#090E34] pt-20 lg:pt-[100px]"
         data-wow-delay=".15s">
-        <div className="container">
+        <div className="container mx-10">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-10 w-full">
@@ -2954,7 +2946,7 @@ function App() {
           </div>
         </div>
         <div className="mt-12 border-t border-[#8890A4] border-opacity-40 py-8 lg:mt-[60px]">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="-mx-4 flex flex-wrap">
               <div className="w-full px-4 md:w-2/3 lg:w-1/2">
                 <div className="my-1">
@@ -3269,4 +3261,4 @@ function App() {
     </>
   );
 }
-export default App;
+export default Index;
