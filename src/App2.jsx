@@ -6,6 +6,8 @@ import Login from "./pages/login";
 import Header from "./components/header"; // Changed to uppercase 'Header'
 import Footer from "./components/footer";
 
+
+
 function App2() {
   return (
     <div>

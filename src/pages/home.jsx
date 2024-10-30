@@ -176,7 +176,7 @@ function Index() {
                 data-wow-delay=".25s">
                 <div className="mt-16">
                   <img
-                    src="src/assets/images/about/Yolo.gif"
+                    src="public/images/about/Yolo.gif"
                     alt="hero"
                     className="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
                   />
@@ -1553,7 +1553,7 @@ function Index() {
                   <div className="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
                     <div className="mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px]">
                       <img
-                        src="src/assets/images/about/Ipad.png"
+                        src="public/images/about/Ipad.png"
                         alt="about image"
                         className="h-full w-full object-cover object-center"
                       />
@@ -2521,60 +2521,60 @@ function Index() {
           <div className="-mx-4 flex flex-wrap items-center justify-center gap-8 xl:gap-11">
             <a href="">
               <img
-                src="src/assets/images/brands/download (1).png"
+                src="public/images/brands/download (1).png"
                 alt="graygrids"
                 className="dark:hidden"
               />
               <img
-                src="src/assets/images/brands/download (1).png"
+                src="public/images/brands/download (1).png"
                 alt="graygrids"
                 className="hidden dark:block"
               />
             </a>
             <a href="">
               <img
-                src="src/assets/images/brands/download (2).png"
+                src="public/images/brands/download (2).png"
                 alt="lineicons"
                 className="dark:hidden"
               />
               <img
-                src="src/assets/images/brands/download (2).png"
+                src="public/images/brands/download (2).png"
                 alt="graygrids"
                 className="hidden dark:block"
               />
             </a>
             <a href="">
               <img
-                src="src/assets/images/brands/download (3).png"
+                src="public/images/brands/download (3).png"
                 alt="uideck"
                 className="dark:hidden"
               />
               <img
-                src="src/assets/images/brands/download (3).png"
+                src="public/images/brands/download (3).png"
                 alt="graygrids"
                 className="hidden dark:block"
               />
             </a>
             <a href="">
               <img
-                src="src/assets/images/brands/download (4).png"
+                src="public/images/brands/download (4).png"
                 alt="ayroui"
                 className="dark:hidden"
               />
               <img
-                src="src/assets/images/brands/download (4).png"
+                src="public/images/brands/download (4).png"
                 alt="graygrids"
                 className="hidden dark:block"
               />
             </a>
             <a href="">
               <img
-                src="src/assets/images/brands/download (6).png"
+                src="public/images/brands/download (6).png"
                 alt="tailgrids"
                 className="dark:hidden"
               />
               <img
-                src="src/assets/images/brands/download (6).png"
+                src="public/images/brands/download (6).png"
                 alt="graygrids"
                 className="hidden dark:block"
               />
