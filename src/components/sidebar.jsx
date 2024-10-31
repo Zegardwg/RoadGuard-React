@@ -7,6 +7,7 @@ import {
   FaFolder,
   FaChartBar,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
@@ -15,17 +16,17 @@ function Sidebar() {
 
       {/* Menu Items */}
       <nav className="flex flex-col gap-6">
-        <MenuItem icon={<FaHome />} title="Dashboard" />
-        <MenuItem icon={<FaChartBar />} title="Monitoring" />
-        <MenuItem icon={<FaUser />} title="User" />
-        <MenuItem icon={<FaClipboard />} title="Reports" />
+        <MenuItem icon={<FaHome />} title="Dashboard" to="/Dashboard" />
+        <MenuItem icon={<FaChartBar />} title="Monitoring" to="/Monitoring" />
+        <MenuItem icon={<FaUser />} title="User" to="/User" />
+        <MenuItem icon={<FaClipboard />} title="Reports" to="/Report" />
 
         {/* Section Title */}
         <div className="text-gray-600 text-sm mt-6">ACCOUNT PAGES</div>
 
-        <MenuItem icon={<FaFolder />} title="Profile" />
-        <MenuItem icon={<FaSignInAlt />} title="Sign In" />
-        <MenuItem icon={<FaSignInAlt />} title="Sign Up" />
+        <MenuItem icon={<FaFolder />} title="Profile" to="/Profile" />
+        <MenuItem icon={<FaSignInAlt />} title="Sign In" to="/Login" />
+        <MenuItem icon={<FaSignInAlt />} title="Sign Up" to="/Signup" />
       </nav>
 
       {/* Help Button */}
@@ -42,12 +43,14 @@ function Sidebar() {
   );
 }
 
-// Komponen Item Menu Sidebar
-const MenuItem = ({ icon, title }) => (
-  <div className="flex items-center text-gray-800 text-lg hover:text-teal-500 cursor-pointer">
+// Menu Item Component for Sidebar with Link
+const MenuItem = ({ icon, title, to }) => (
+  <Link
+    to={to}
+    className="flex items-center text-gray-800 text-lg hover:text-teal-500 cursor-pointer">
     <div className="mr-3 text-teal-500">{icon}</div>
     <span>{title}</span>
-  </div>
+  </Link>
 );
 
 export default Sidebar;

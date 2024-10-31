@@ -3,10 +3,12 @@ import Index from "./pages/home";
 import Signup from "./pages/signup";
 import Login from "./pages/login";
 import Report from "./pages/report";
+import User from "./pages/user";
+import Monitoring from "./pages/monitoring";
 import Dashboard from "./components/dashboard";
 import Header from "./components/Header"; // Pastikan penggunaan huruf kapital sesuai
 import Footer from "./components/Footer";
-import Sidebar from "./components/Sidebar"; // Import Sidebar
+import Sidebar from "./components/sidebar"; // Import Sidebar
 
 function App2() {
   return (
@@ -16,6 +18,8 @@ function App2() {
         <Routes>
           <Route path="/Dashboard" element={<Sidebar />} />
           <Route path="/Report" element={<Sidebar />} />
+          <Route path="/User" element={<Sidebar />} />
+          <Route path="/Monitoring" element={<Sidebar />} />
         </Routes>
 
         <div className="flex-1">
@@ -26,6 +30,8 @@ function App2() {
             <Route path="/Login" element={<Login />} />
             <Route path="/Dashboard" element={<Dashboard />} />
             <Route path="/Report" element={<Report />} />
+            <Route path="/User" element={<User />} />
+            <Route path="/Monitoring" element={<Monitoring />} />
           </Routes>
           <Footer />
         </div>
