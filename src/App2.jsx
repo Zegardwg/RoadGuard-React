@@ -7,7 +7,7 @@ import User from "./pages/user";
 import Monitoring from "./pages/monitoring";
 import Dashboard from "./components/dashboard";
 import Header from "./components/header"; // Pastikan penggunaan huruf kapital sesuai
-import Footer from "./components/Footer";
+import Footer from "./components/footer";
 import Sidebar from "./components/sidebar"; // Import Sidebar
 import 'leaflet/dist/leaflet.css';
 function App2() {
