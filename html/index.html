@@ -1,109 +1,83 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx" type="module" ></script>
-  </body>
-</html>
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="shortcut icon" href="src/assets/images/" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="shortcut icon" href="src/assets/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="src/assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="src/assets/css/animate.css" />
     <link rel="stylesheet" href="src/assets/css/tailwind.css" />
-
-    <!-- ==== WOW JS ==== -->
-    <script src="src/assets/js/wow.min.js" type="module"></script>
-    <script>
-      new WOW().init();
-    </script>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx" type="module"></script>
+
+    <!-- Main React Script -->
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- WOW JS for Animations -->
+    <script src="src/assets/js/wow.min.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        new WOW().init();
+      });
+    </script>
+
+    <!-- Swiper and Custom JS -->
+    <script src="src/assets/js/swiper-bundle.min.js" defer></script>
+    <script src="src/assets/js/main.js" defer></script>
+    <script>
+      // Smooth Scroll for Menu Links
+      document.addEventListener("DOMContentLoaded", () => {
+        const pageLinks = document.querySelectorAll(".ud-menu-scroll");
+
+        pageLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const target = document.querySelector(link.getAttribute("href"));
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        });
+      });
+
+      // Section Menu Active on Scroll
+      function onScroll() {
+        const sections = document.querySelectorAll(".ud-menu-scroll");
+        const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+        sections.forEach((section) => {
+          const sectionId = section.getAttribute("href");
+          const refElement = document.querySelector(sectionId);
+
+          if (
+            refElement.offsetTop <= scrollPos + 73 &&
+            refElement.offsetTop + refElement.offsetHeight > scrollPos + 73
+          ) {
+            document.querySelector(".ud-menu-scroll.active")?.classList.remove("active");
+            section.classList.add("active");
+          }
+        });
+      }
+
+      document.addEventListener("scroll", onScroll);
+
+      // Initialize Swiper for Testimonials
+      document.addEventListener("DOMContentLoaded", () => {
+        new Swiper(".testimonial-carousel", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            640: { slidesPerView: 2, spaceBetween: 30 },
+            1024: { slidesPerView: 3, spaceBetween: 30 },
+            1280: { slidesPerView: 3, spaceBetween: 30 },
+          },
+        });
+      });
+    </script>
   </body>
 </html>
-<script src="src/assets/js/swiper-bundle.min.js" type="module"></script>
-<script src="src/assets/js/main.js" type="module"></script>
-<script>
-  // ==== for menu scroll
-  const pageLink = document.querySelectorAll(".ud-menu-scroll");
-
-  pageLink.forEach((elem) => {
-    elem.addEventListener("click", (e) => {
-      e.preventDefault();
-      document.querySelector(elem.getAttribute("href")).scrollIntoView({
-        behavior: "smooth",
-        offsetTop: 1 - 60,
-      });
-    });
-  });
-
-  // section menu active
-  function onScroll(event) {
-    const sections = document.querySelectorAll(".ud-menu-scroll");
-    const scrollPos =
-      window.pageYOffset ||
-      document.documentElement.scrollTop ||
-      document.body.scrollTop;
-      const currLink = sections[i];
-      const val = currLink.getAttribute("href");
-      const refElement = document.querySelector(val);
-      const scrollTopMinus = scrollPos + 73;
-      if (
-        refElement.offsetTop <= scrollTopMinus &&
-        refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
-      ) {
-        document
-          .querySelector(".ud-menu-scroll")
-          classNameList.remove("active");
-        currLink classNameList.add("active");
-      } else {
-
-      }
-    }
-
-
-  window.document.addEventListener("scroll", onScroll);
-
-  // Testimonial
-  const testimonialSwiper = new Swiper(".testimonial-carousel", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    breakpoints: {
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-      1280: {
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
-    },
-  });
-</script>
