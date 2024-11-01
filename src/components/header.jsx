@@ -59,7 +59,7 @@ function header() {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <label
+                {/* <label
                   htmlFor="themeSwitcher"
                   className="inline-flex cursor-pointer items-center"
                   aria-label="themeSwitcher"
@@ -107,7 +107,7 @@ function header() {
                       </defs>
                     </svg>
                   </span>
-                </label>
+                </label> */}
                 <div className="hidden sm:flex">
                   <a
                     href="/Signup"

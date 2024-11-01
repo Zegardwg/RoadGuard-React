@@ -21,7 +21,6 @@ function Login() {
         .required("Password is required"),
     }),
     onSubmit: () => {
-      // Simulate a login success and redirect
       toast.success("Login successful!", {
         icon: "🚀",
         duration: 2000,
@@ -31,6 +30,11 @@ function Login() {
       }, 2000);
     },
   });
+
+  // Event handler for input changes
+  const handleInputChange = (e) => {
+    formik.setFieldValue(e.target.name, e.target.value);
+  };
 
   return (
     <div>
@@ -60,7 +64,9 @@ function Login() {
                   name="email"
                   type="email"
                   autoComplete="email"
-                  {...formik.getFieldProps("email")}
+                  onChange={handleInputChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.email}
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
                 />
                 {formik.touched.email && formik.errors.email ? (
@@ -89,7 +95,9 @@ function Login() {
                   name="password"
                   type="password"
                   autoComplete="current-password"
-                  {...formik.getFieldProps("password")}
+                  onChange={handleInputChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.password}
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
                 />
                 {formik.touched.password && formik.errors.password ? (

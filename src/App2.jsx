@@ -9,10 +9,11 @@ import Dashboard from "./components/dashboard";
 import Header from "./components/Header"; // Pastikan penggunaan huruf kapital sesuai
 import Footer from "./components/Footer";
 import Sidebar from "./components/sidebar"; // Import Sidebar
-
+import 'leaflet/dist/leaflet.css';
 function App2() {
   return (
     <Router>
+      
       <div className="flex min-h-screen">
         {/* Sidebar hanya muncul di halaman Dashboard */}
         <Routes>
