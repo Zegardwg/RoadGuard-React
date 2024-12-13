@@ -67,13 +67,13 @@ function Header() {
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <div className="hidden sm:flex">
                   <a
-                    href="/Signup"
+                    href="http://localhost:8501/"
                     className="loginBtn px-[22px] py-2 text-base font-medium text-white hover:opacity-70 transition-opacity duration-300"
                   >
                     Sign In
                   </a>
                   <a
-                    href="/Login"
+                    href="http://localhost:8501/"
                     className="signUpBtn rounded-md bg-white bg-opacity-20 px-6 py-2 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-100 hover:text-dark"
                   >
                     Login

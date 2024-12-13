@@ -103,7 +103,7 @@ function Index() {
                 data-wow-delay=".25s">
                 <div className="mt-16">
                   <img
-                    src="images/about/Yolo.gif"
+                    src="src/assets/Yolo2.gif"
                     alt="hero"
                     className="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
                   />
@@ -1426,11 +1426,6 @@ function Index() {
                   dan penetapan tugas Kelola tugas pemeliharaan jalan dengan
                   memantau peta insiden dan cetakannya
                 </p>
-                <a
-                  href="javascript:void(0)"
-                  className="text-base font-medium text-dark hover:text-primary dark:text-white dark:hover:text-primary">
-                  Learn More
-                </a>
               </div>
             </div>
           </div>
