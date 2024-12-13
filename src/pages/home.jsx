@@ -1427,11 +1427,11 @@ function Index() {
                   dan penetapan tugas Kelola tugas pemeliharaan jalan dengan
                   memantau peta insiden dan cetakannya
                 </p>
-                <a
+                {/* <a
                   href="javascript:void(0)"
                   className="text-base font-medium text-dark hover:text-primary dark:text-white dark:hover:text-primary">
                   Learn More
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
