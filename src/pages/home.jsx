@@ -104,7 +104,7 @@ function Index() {
                 data-wow-delay=".25s">
                 <div className="mt-16">
                   <img
-                    src="images/about/Yolo.gif"
+                    src="images/about/Yolo2.gif"
                     alt="hero"
                     className="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
                   />
